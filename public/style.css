@@ -1,0 +1,127 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+:root {
+	--correct: #2ECC40;
+	--otherpos: #FF851B;
+	--noletter: #111;
+}
+
+body {
+	line-height: 1;
+}
+
+h3 {
+	text-align: center;
+	padding: 1rem;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#game {
+	width: 340px;
+	height: 70vh;
+	margin: auto;
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-row: 5px;
+}
+
+#game > div {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column: 5px;
+}
+
+#game .letter {
+	border: 1px solid #aaa;
+	line-height: 2;
+	text-align: center;
+	font-size: 2rem;
+	margin: .1rem;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+#game .letter.correct {
+	background: var(--correct);
+	border-color: var(--correct);
+	color: #eee;
+}
+
+#game .letter.other-pos {
+	background: var(--otherpos);
+	border-color: var(--otherpos);
+	color: #eee;
+}
+
+#game .letter.no-letter {
+	background: var(--noletter);
+	border-color: var(--noletter);
+	color: #eee;
+}
+
+#keyboard {
+	width: 340px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+#keyboard > .keys-row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+}
+
+.key {
+	text-align: center;
+	border: 1px solid #aaa;
+	width: 1.7rem;
+	height: 1.7rem;
+	line-height: 1.7rem;
+	cursor: pointer;
+	margin: 2px;
+}
+
+#key-enter,
+#key-backspace {
+  background-size: 1.4rem;
+	background-position: center;
+	background-repeat: no-repeat
+}
+
+#key-enter {
+	background-image: url(icons/enter.svg);
+}
+
+#key-backspace {
+	background-image: url(icons/backspace.svg);
+}

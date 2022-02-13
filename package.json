@@ -1,0 +1,17 @@
+{
+  "name": "wordfrikile",
+  "version": "0.0.1",
+  "description": "WordFrikile is a Wordle clone, for frikis/freaks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alfonso Saavedra 'Son Link'",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "node-static": "^0.7.11"
+  }
+}
