@@ -3,9 +3,10 @@ const helmet = require('helmet');
 const cors = require('cors');
 const {createReadStream} = require('fs');
 const readline = require('readline');
+const process = require('process');
 
 const app = express();
-const port = 80;
+const port = process.env.PORT || 80
 
 app.use(cors());
 app.use(helmet());
@@ -80,6 +81,6 @@ app.get('/checkword', (req, res) => {
   } else res.end('No word');
 });
 
-app.listen( () => {
+app.listen(port, () => {
   console.log(`Running server`)
 });
