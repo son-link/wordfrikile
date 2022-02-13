@@ -80,6 +80,6 @@ app.get('/checkword', (req, res) => {
   } else res.end('No word');
 });
 
-app.listen(port, () => {
+app.listen( () => {
   console.log(`Running server`)
 });
