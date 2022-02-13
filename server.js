@@ -5,7 +5,7 @@ const {createReadStream} = require('fs');
 const readline = require('readline');
 
 const app = express();
-const port = 5000;
+const port = 80;
 
 app.use(cors());
 app.use(helmet());
@@ -81,5 +81,5 @@ app.get('/checkword', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Running server`)
 });
