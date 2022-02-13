@@ -8,7 +8,7 @@ const keys = [
 ];
 
 comp_word = () => {
-  $().get('http://localhost:5000/checkword', {word, word}, (resp) => {
+  $().get('/checkword', {word, word}, (resp) => {
     if (resp) {
       for(i=0; i < 5; i++){
         const nth = i+1;
@@ -46,7 +46,7 @@ comp_key = key => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $().get('http://localhost:5000/getwordday', {}, (resp) => {});
+  $().get('/getwordday', {}, (resp) => {});
 
   var keys_html = '';
   keys.forEach( r => {
