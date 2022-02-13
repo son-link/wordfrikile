@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
 app.get('/getwordday', (req, res) => {
   const word = wordOfTheDay();
   currentWord = word
-  res.json(word);
+  res.end();
 });
 
 app.get('/checkword', (req, res) => {
