@@ -86,7 +86,7 @@ h3 {
 }
 
 #keyboard {
-	width: 340px;
+	width: 300px;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -105,8 +105,8 @@ h3 {
 	text-align: center;
 	border: 1px solid #aaa;
 	width: 1.7rem;
-	height: 1.7rem;
-	line-height: 1.7rem;
+	height: 2rem;
+	line-height: 2rem;
 	cursor: pointer;
 	margin: 2px;
 }

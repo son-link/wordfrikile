@@ -46,7 +46,7 @@ comp_key = key => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $().get('/getwordday', {}, (resp) => {});
+  $().get('/getwordday', resp => {});
 
   var keys_html = '';
   keys.forEach( r => {
@@ -61,8 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   $('body').on('keyup', e => {
-    const key = e.key.toLowerCase();
-    comp_key(key);
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+      const key = e.key.toLowerCase();
+      comp_key(key);
+    }
   });
 
   $('#keyboard').on('click', '.key', e => {
